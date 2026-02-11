@@ -1,0 +1,44 @@
+# Audio files
+*.wav
+*.mp3
+*.m4a
+*.flac
+*.ogg
+*.webm
+
+# Model weights
+*.pt
+*.bin
+*.onnx
+
+# Outputs
+outputs/
+*.json
+!configs/*.yaml
+
+# Python
+__pycache__/
+*.pyc
+*.egg-info/
+dist/
+build/
+.eggs/
+*.egg
+
+# Environment
+.env
+.venv/
+venv/
+env/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Jupyter
+.ipynb_checkpoints/

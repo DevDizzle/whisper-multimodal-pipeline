@@ -1,0 +1,36 @@
+# Whisper Multimodal Pipeline Configuration
+
+transcription:
+  # Backend: "whisper" (local OpenAI Whisper) or "gcp" (Google Cloud Speech-to-Text)
+  backend: whisper
+
+  # Whisper model size: tiny, base, small, medium, large, large-v2, large-v3
+  # Larger models = better accuracy, more VRAM
+  whisper_model: base
+
+  # Language code (null = auto-detect)
+  language: null
+
+analysis:
+  # Gemini model for text analysis
+  gemini_model: gemini-1.5-pro
+
+  # Lower temperature = more deterministic structured output
+  temperature: 0.2
+
+  # Max tokens for analysis response
+  max_output_tokens: 4096
+
+  # Custom analysis prompt (null = use default)
+  custom_prompt: null
+
+pipeline:
+  # Retry configuration for API calls
+  max_retries: 3
+  retry_delay_seconds: 2.0
+
+  # Output directory for JSON results
+  output_dir: outputs
+
+  # Logging level: DEBUG, INFO, WARNING, ERROR
+  log_level: INFO
